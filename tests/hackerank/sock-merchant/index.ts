@@ -1,4 +1,4 @@
-// https://www.hackerrank.com/challenges/sock-merchant
+// https://www.hackerrank.com/challenges/sock-merchant/
 export const solution = (input: number[]): number => {
   const memo: { [key: number]: number } = {};
   let pairs = 0;
