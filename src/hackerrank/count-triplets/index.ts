@@ -1,8 +1,9 @@
 // https://www.hackerrank.com/challenges/count-triplets-1
+
 type Cache = { [key: number]: number };
 
 // time: O(n), space: O(n)
-export const solution = (arr: number[], r: number): number => {
+export const countTriplets = (arr: number[], r: number): number => {
   if (arr.length < 3) return 0;
 
   const occurrences: Cache = {};

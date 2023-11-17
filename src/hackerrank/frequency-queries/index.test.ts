@@ -1,10 +1,10 @@
 import { describe, it, expect } from 'vitest';
-import { solution } from '.';
+import { frequencyQueries } from '.';
 
 describe('Frequency Queries', () => {
-  it('Sample tests', () => {
+  it('should handle a mix of queries with basic operations', () => {
     expect(
-      solution([
+      frequencyQueries([
         [1, 1],
         [2, 2],
         [3, 2],
@@ -14,16 +14,22 @@ describe('Frequency Queries', () => {
         [3, 2],
       ])
     ).deep.equal([0, 1]);
+  });
+
+  it('should handle queries with infrequent and large values', () => {
     expect(
-      solution([
+      frequencyQueries([
         [3, 4],
         [2, 1003],
         [1, 16],
         [3, 1],
       ])
     ).deep.equal([0, 1]);
+  });
+
+  it('should manage a sequence of frequent insertions and deletions', () => {
     expect(
-      solution([
+      frequencyQueries([
         [1, 3],
         [2, 3],
         [3, 2],
@@ -36,8 +42,11 @@ describe('Frequency Queries', () => {
         [3, 2],
       ])
     ).deep.equal([0, 1, 1]);
+  });
+
+  it('should correctly respond to the removal of elements', () => {
     expect(
-      solution([
+      frequencyQueries([
         [1, 5],
         [1, 6],
         [3, 2],
@@ -48,8 +57,11 @@ describe('Frequency Queries', () => {
         [3, 2],
       ])
     ).deep.equal([0, 1]);
+  });
+
+  it('should deal with a complex series of queries and deletions', () => {
     expect(
-      solution([
+      frequencyQueries([
         [1, 3],
         [1, 38],
         [2, 1],

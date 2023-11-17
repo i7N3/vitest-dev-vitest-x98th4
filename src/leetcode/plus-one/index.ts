@@ -1,5 +1,5 @@
 // time: O(n), space: O(n)
-export const solution = (digits: number[]): number[] => {
+export const plusOne = (digits: number[]): number[] => {
   // Start from the last digit (rightmost) and move towards the left.
   for (let i = digits.length - 1; i >= 0; i--) {
     // If the current digit is less than 9, we can simply increment it.

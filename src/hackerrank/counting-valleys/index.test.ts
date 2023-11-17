@@ -1,9 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { solution } from '.';
+import { countingValleys } from '.';
 
 describe('Counting Valleys', () => {
-  it('Sample tests', () => {
-    expect(solution('UDDDUDUU')).toBe(1);
-    expect(solution('DDUUDDUDUUUD')).toBe(2);
+  it('should count the number of valleys in a simple hike', () => {
+    expect(countingValleys('UDDDUDUU')).toBe(1);
+  });
+
+  it('should accurately count valleys in a longer hike with multiple valleys', () => {
+    expect(countingValleys('DDUUDDUDUUUD')).toBe(2);
   });
 });

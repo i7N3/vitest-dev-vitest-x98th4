@@ -1,5 +1,7 @@
 // https://www.hackerrank.com/challenges/counting-valleys/
-export const solution = (route: string): number => {
+
+// time: O(n), space: O(1)
+export const countingValleys = (route: string): number => {
   let count = 0;
   let height = 0;
   const path = route.split('') as 'U' | 'D'[];

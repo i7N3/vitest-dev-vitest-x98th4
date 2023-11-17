@@ -1,18 +1,34 @@
 import { describe, it, expect } from 'vitest';
-import { solution } from '.';
+import { alternatingCharacters } from '.';
 
 describe('Alternating Characters', () => {
-  it('Sample tests', () => {
-    expect(solution('AAAA')).toBe(3);
-    expect(solution('BBBBB')).toBe(4);
-    expect(solution('ABABABAB')).toBe(0);
-    expect(solution('BABABA')).toBe(0);
-    expect(solution('AAABBB')).toBe(4);
+  it('should count deletions for a string with repeating As', () => {
+    expect(alternatingCharacters('AAAA')).toBe(3);
+  });
 
-    expect(solution('AAABBBAABB')).toBe(6);
-    expect(solution('AABBAABB')).toBe(4);
-    expect(solution('ABABABAA')).toBe(1);
+  it('should count deletions for a string with repeating Bs', () => {
+    expect(alternatingCharacters('BBBBB')).toBe(4);
+  });
 
-    expect(solution('ABBABBAA')).toBe(3);
+  it('should return zero for an alternating AB pattern without repeats', () => {
+    expect(alternatingCharacters('ABABABAB')).toBe(0);
+  });
+
+  it('should return zero for an alternating BA pattern without repeats', () => {
+    expect(alternatingCharacters('BABABA')).toBe(0);
+  });
+
+  it('should count deletions for a string with mixed A and B repeats', () => {
+    expect(alternatingCharacters('AAABBB')).toBe(4);
+  });
+
+  it('should handle longer strings with mixed repeats', () => {
+    expect(alternatingCharacters('AAABBBAABB')).toBe(6);
+    expect(alternatingCharacters('AABBAABB')).toBe(4);
+    expect(alternatingCharacters('ABABABAA')).toBe(1);
+  });
+
+  it('should count deletions for a string with non-uniform alternation', () => {
+    expect(alternatingCharacters('ABBABBAA')).toBe(3);
   });
 });

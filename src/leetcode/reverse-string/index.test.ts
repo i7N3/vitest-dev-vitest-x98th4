@@ -1,14 +1,16 @@
 import { describe, expect, it } from 'vitest';
-import { solution } from '.';
+import { reverseString } from '.';
 
 describe('Reverse String', () => {
-  it('Sample tests', () => {
+  it('should reverse a simple lowercase string', () => {
     let input1 = ['h', 'e', 'l', 'l', 'o'];
-    solution(input1);
+    reverseString(input1);
     expect(input1).deep.equal(['o', 'l', 'l', 'e', 'h']);
+  });
 
+  it('should reverse a string with mixed case characters', () => {
     let input2 = ['H', 'a', 'n', 'n', 'a', 'h'];
-    solution(input2);
+    reverseString(input2);
     expect(input2).deep.equal(['h', 'a', 'n', 'n', 'a', 'H']);
   });
 });

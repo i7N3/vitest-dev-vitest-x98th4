@@ -1,5 +1,5 @@
 // time: O(n), space: O(n)
-export const solution = (input: number[], target: number): number[] => {
+export const twoSum = (input: number[], target: number): number[] => {
   const numToIndex = new Map();
 
   // input: [3, 2, 4], target: 6

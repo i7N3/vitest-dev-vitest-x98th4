@@ -51,6 +51,6 @@ const isValidString = (input: string): boolean => {
   return false;
 };
 
-export const solution = (input: string): string => {
+export const sherlockAndTheValidString = (input: string): string => {
   return isValidString(input) ? 'YES' : 'NO';
 };

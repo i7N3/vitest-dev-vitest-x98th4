@@ -1,5 +1,5 @@
 // time: O(n), space: O(1)
-export const solution = (prices: number[]): number => {
+export const bestTimeToBuyAndSellStockII = (prices: number[]): number => {
   if (prices.length === 0) {
     return 0;
   }

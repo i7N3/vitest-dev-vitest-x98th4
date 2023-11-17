@@ -1,5 +1,7 @@
 // https://www.hackerrank.com/challenges/minimum-swaps-2
-export const solution = (arr?: number[] | null): number => {
+
+// time: O(n), space: O(1)
+export const minimumSwaps2 = (arr?: number[] | null): number => {
   if (!arr || arr.length === 0) return 0;
 
   let swapsCount = 0;

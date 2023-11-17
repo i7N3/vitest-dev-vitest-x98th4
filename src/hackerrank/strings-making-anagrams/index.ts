@@ -4,7 +4,7 @@ const ENGLISH_LOWERCASE_LETTERS = 26;
 const LOWERCASE_A_CODE = 97;
 
 // time: O(n + n + n) -> O(n), space: O(1)
-export const solution = (a: string, b: string): number => {
+export const stringsMakingAnagrams = (a: string, b: string): number => {
   let result = 0;
   const freq = Array(ENGLISH_LOWERCASE_LETTERS).fill(0);
 

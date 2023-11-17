@@ -1,17 +1,38 @@
 import { describe, it, expect } from 'vitest';
-import { solution } from '.';
+import { sherlockAndTheValidString } from '.';
 
 describe('Sherlock and the Valid String', () => {
-  it('Sample tests', () => {
-    expect(solution('aabbcd')).toBe('NO');
-    expect(solution('aabbccddeefghi')).toBe('NO');
-    expect(solution('abcdefghhgfedecba')).toBe('YES');
-    expect(solution('aaaabbcc')).toBe('NO');
-    expect(solution('aabbc')).toBe('YES');
-    expect(solution('aaaaabc')).toBe('NO');
-    expect(solution('abbac')).toBe('YES');
+  it('should return "NO" for string "aabbcd"', () => {
+    expect(sherlockAndTheValidString('aabbcd')).toBe('NO');
+  });
+
+  it('should return "NO" for string "aabbccddeefghi"', () => {
+    expect(sherlockAndTheValidString('aabbccddeefghi')).toBe('NO');
+  });
+
+  it('should return "YES" for string "abcdefghhgfedecba"', () => {
+    expect(sherlockAndTheValidString('abcdefghhgfedecba')).toBe('YES');
+  });
+
+  it('should return "NO" for string "aaaabbcc"', () => {
+    expect(sherlockAndTheValidString('aaaabbcc')).toBe('NO');
+  });
+
+  it('should return "YES" for string "aabbc"', () => {
+    expect(sherlockAndTheValidString('aabbc')).toBe('YES');
+  });
+
+  it('should return "NO" for string "aaaaabc"', () => {
+    expect(sherlockAndTheValidString('aaaaabc')).toBe('NO');
+  });
+
+  it('should return "YES" for string "abbac"', () => {
+    expect(sherlockAndTheValidString('abbac')).toBe('YES');
+  });
+
+  it('should return "YES" for very long string', () => {
     expect(
-      solution(
+      sherlockAndTheValidString(
         'ibfdgaeadiaefgbhbdghhhbgdfgeiccbiehhfcggchgghadhdhagfbahhddgghbdehidbibaeaagaeeigffcebfbaieggabcfbiiedcabfihchdfabifahcbhagccbdfifhghcadfiadeeaheeddddiecaicbgigccageicehfdhdgafaddhffadigfhhcaedcedecafeacbdacgfgfeeibgaiffdehigebhhehiaahfidibccdcdagifgaihacihadecgifihbebffebdfbchbgigeccahgihbcbcaggebaaafgfedbfgagfediddghdgbgehhhifhgcedechahidcbchebheihaadbbbiaiccededchdagfhccfdefigfibifabeiaccghcegfbcghaefifbachebaacbhbfgfddeceababbacgffbagidebeadfihaefefegbghgddbbgddeehgfbhafbccidebgehifafgbghafacgfdccgifdcbbbidfifhdaibgigebigaedeaaiadegfefbhacgddhchgcbgcaeaieiegiffchbgbebgbehbbfcebciiagacaiechdigbgbghefcahgbhfibhedaeeiffebdiabcifgccdefabccdghehfibfiifdaicfedagahhdcbhbicdgibgcedieihcichadgchgbdcdagaihebbabhibcihicadgadfcihdheefbhffiageddhgahaidfdhhdbgciiaciegchiiebfbcbhaeagccfhbfhaddagnfieihghfbaggiffbbfbecgaiiidccdceadbbdfgigibgcgchafccdchgifdeieicbaididhfcfdedbhaadedfageigfdehgcdaecaebebebfcieaecfagfdieaefdiedbcadchabhebgehiidfcgahcdhcdhgchhiiheffiifeegcfdgbdeffhgeghdfhbfbifgidcafbfcd'
       )
     ).toBe('YES');

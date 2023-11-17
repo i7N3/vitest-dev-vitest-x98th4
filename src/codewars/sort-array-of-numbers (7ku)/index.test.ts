@@ -1,11 +1,12 @@
 import { describe, expect, test } from 'vitest';
-import { solution } from '.';
+import { sortArrayOfNumbers } from '.';
 
 describe('Sort array of numbers (7ku)', () => {
-  test('Should return an empty array', () => {
-    expect(solution([])).toEqual([]);
+  test('should return an empty array when given an empty array', () => {
+    expect(sortArrayOfNumbers([])).toEqual([]);
   });
-  test('Should return an array', () => {
-    expect(solution([1, 2, 10, 50, 5])).toEqual([1, 2, 5, 10, 50]);
+
+  test('should return a sorted array when given an unsorted array', () => {
+    expect(sortArrayOfNumbers([1, 2, 10, 50, 5])).toEqual([1, 2, 5, 10, 50]);
   });
 });

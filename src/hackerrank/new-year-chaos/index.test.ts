@@ -1,15 +1,24 @@
 import { describe, it, expect } from 'vitest';
-import { solution } from '.';
+import { newYearChaos } from '.';
 
 describe('New Year Chaos', () => {
-  it('Sample tests', () => {
-    expect(solution([2, 1, 5, 3, 4])).toBe(3);
-    expect(solution([2, 5, 1, 3, 4])).toBe(null);
-    expect(solution([1, 2, 5, 3, 4, 7, 8, 6])).toBe(4);
-    expect(solution([5, 1, 2, 3, 7, 8, 6, 4])).toBe(null);
-    expect(solution([1, 2, 5, 3, 7, 8, 6, 4])).toBe(7);
+  it('should return 3 for the first array', () => {
+    expect(newYearChaos([2, 1, 5, 3, 4])).toBe(3);
+  });
+
+  it('should return null for arrays representing too much chaos', () => {
+    expect(newYearChaos([2, 5, 1, 3, 4])).toBe(null);
+    expect(newYearChaos([5, 1, 2, 3, 7, 8, 6, 4])).toBe(null);
+  });
+
+  it('should return correct counts for other arrays', () => {
+    expect(newYearChaos([1, 2, 5, 3, 4, 7, 8, 6])).toBe(4);
+    expect(newYearChaos([1, 2, 5, 3, 7, 8, 6, 4])).toBe(7);
+  });
+
+  it('should return correct counts for long arrays', () => {
     expect(
-      solution([
+      newYearChaos([
         2, 1, 5, 6, 3, 4, 9, 8, 11, 7, 10, 14, 13, 12, 17, 16, 15, 19, 18, 22,
         20, 24, 23, 21, 27, 28, 25, 26, 30, 29, 33, 32, 31, 35, 36, 34, 39, 38,
         37, 42, 40, 44, 41, 43, 47, 46, 48, 45, 50, 52, 49, 51, 54, 56, 55, 53,

@@ -18,7 +18,7 @@ const initCache = (): Record<number, Set<string>> => {
   return cache;
 };
 
-export const solution = (board: string[][]): boolean => {
+export const validSudoku = (board: string[][]): boolean => {
   const cache = { rows: initCache(), cols: initCache(), boxes: initCache() };
 
   for (let rowIdx = 0; rowIdx < 9; rowIdx++) {

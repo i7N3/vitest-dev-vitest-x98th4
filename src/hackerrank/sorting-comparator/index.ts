@@ -1,4 +1,5 @@
 // https://www.hackerrank.com/challenges/ctci-comparator-sorting
+
 export class Player {
   name: string;
   score: number;
@@ -16,7 +17,8 @@ class Checker {
   }
 }
 
-export const solution = (source: Player[]): Player[] => {
+// time: O(n log n), space: O(1), n - length of the source
+export const sortingComparator = (source: Player[]): Player[] => {
   const checker = new Checker();
   return source.sort(checker.compare);
 };

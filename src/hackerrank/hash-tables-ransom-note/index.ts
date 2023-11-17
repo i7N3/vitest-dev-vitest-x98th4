@@ -1,6 +1,10 @@
 // https://www.hackerrank.com/challenges/ctci-ransom-note
+
 // time: O (n * m)
-export const solution = (magazine: string[], note: string[]): number => {
+export const hashTablesRansomNote = (
+  magazine: string[],
+  note: string[]
+): number => {
   const hash: { [key: string]: number } = {};
 
   for (let i = 0; i < magazine.length; i++) {

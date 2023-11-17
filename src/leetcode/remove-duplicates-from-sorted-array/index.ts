@@ -1,5 +1,5 @@
 // time: O(n), space: O(1)
-export const solution = (input: number[]): number => {
+export const removeDuplicatesFromSortedArray = (input: number[]): number => {
   const uniqueSet = new Set<number>();
   let uniqueIndex = 0;
 

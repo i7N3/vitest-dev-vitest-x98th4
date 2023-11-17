@@ -1,4 +1,5 @@
 // https://www.hackerrank.com/challenges/ctci-bubble-sort
+
 type Result = {
   numSwaps: number;
   firstElement: number;
@@ -6,7 +7,7 @@ type Result = {
 };
 
 // time: O(n^2), space: O(1)
-export const solution = (input: number[]): Result => {
+export const bubbleSort = (input: number[]): Result => {
   let numSwaps = 0;
 
   for (let i = 0; i < input.length; i++) {

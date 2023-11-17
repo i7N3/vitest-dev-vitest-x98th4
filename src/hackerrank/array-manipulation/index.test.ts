@@ -1,17 +1,20 @@
 import { describe, it, expect } from 'vitest';
-import { solution } from '.';
+import { arrayManipulation } from '.';
 
 describe('Array Manipulation', () => {
-  it('Sample tests', () => {
+  it('should calculate the maximum value after a series of range-based updates on a larger array', () => {
     expect(
-      solution(10, [
+      arrayManipulation(10, [
         [1, 5, 3],
         [4, 8, 7],
         [6, 9, 1],
       ])
     ).toBe(10);
+  });
+
+  it('should calculate the maximum value after a series of range-based updates on a smaller array', () => {
     expect(
-      solution(5, [
+      arrayManipulation(5, [
         [1, 2, 100],
         [2, 5, 100],
         [3, 4, 100],

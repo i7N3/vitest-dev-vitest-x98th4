@@ -1,5 +1,7 @@
 // https://www.hackerrank.com/challenges/2d-array/
-export const solution = (arr: number[][]): number => {
+
+// time: O(n^2), space: O(1)
+export const twoDimArray = (arr: number[][]): number => {
   let maxSum = -Infinity;
   let total = 0;
 

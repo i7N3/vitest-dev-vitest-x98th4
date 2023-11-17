@@ -1,4 +1,5 @@
 // https://www.codewars.com/kata/55dd5386575839a74f0000a9/train/javascript
+
 export class Node {
   data: number;
   next: Node | null = null;
@@ -33,7 +34,6 @@ export const buildList = (input: number[]): Node | null => {
   return linkedList[0];
 };
 
-// recursively
 const split = (head: Node | null) => {
   if (head == null) return null;
   const result = new Node(head.data);
@@ -41,14 +41,17 @@ const split = (head: Node | null) => {
   return result;
 };
 
-export const solution = (head: Node | null): Context => {
+// time: O(n), space: O(n)
+export const linkedListsAlternatingSplitRecursively = (
+  head: Node | null
+): Context => {
   if (!head) throw new Error("Can't process list with head == null");
   if (!head.next) throw new Error("Can't process list with length == 1");
   return new Context(split(head), split(head.next));
 };
 
-// iteratively
-export const solutionUsingHelper = (head: Node | null): Context => {
+// time: O(n), space: O(n)
+const linkedListsAlternatingSplitIteratively = (head: Node | null): Context => {
   if (!head) throw new Error("Can't process list with head == null");
   if (!head.next) throw new Error("Can't process list with length == 1");
 

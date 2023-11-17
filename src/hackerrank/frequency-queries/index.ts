@@ -1,4 +1,5 @@
 // https://www.hackerrank.com/challenges/frequency-queries
+
 enum Operation {
   Insert = 1, // (1x)
   // push x to cache
@@ -8,7 +9,8 @@ enum Operation {
   // if any int present in cache with frequency z, push 1 to result else 0
 }
 
-export const solution = (input: number[][]): number[] => {
+// time: O(n), space: O(n)
+export const frequencyQueries = (input: number[][]): number[] => {
   const result: number[] = [];
   const cache = new Map<number, number>();
 

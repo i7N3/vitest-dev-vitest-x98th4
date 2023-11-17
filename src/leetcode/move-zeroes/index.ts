@@ -1,5 +1,5 @@
 // time: O(n), space: O(1)
-export const solution = (input: number[]): void => {
+export const moveZeroes = (input: number[]): void => {
   // Using two pointers approach
   let index = 0;
   let nonZeroIndex = 0;

@@ -1,7 +1,7 @@
 // https://www.hackerrank.com/challenges/ctci-merge-sort
 
 // time: O(n log n), space: O(n log n)
-export const solution = (source: number[]): number => {
+export const mergeSortCountingInversions = (source: number[]): number => {
   const [sorted, inversions] = sort(source);
   return inversions;
 };

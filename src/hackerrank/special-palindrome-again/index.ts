@@ -1,5 +1,5 @@
 // time: O(n^2), space: O(1)
-export const solution = (input: string): number => {
+export const specialPalindromeAgain = (input: string): number => {
   const length = input.length;
   let result = 0;
   let i = 0;

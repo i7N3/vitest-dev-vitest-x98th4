@@ -1,7 +1,7 @@
 // https://www.hackerrank.com/challenges/common-child
 
 // time: O(m * n), space: O(m * n)
-export const solution = (input1: string, input2: string): number => {
+export const commonChild = (input1: string, input2: string): number => {
   const dp: number[][] = [];
 
   const n = input1.length;

@@ -17,7 +17,7 @@
  */
 
 // time: O(n^2), space: O(1)
-export const solution = (matrix: number[][]): void => {
+export const rotateImage = (matrix: number[][]): void => {
   const n = matrix.length;
 
   // 1. Transpose the matrix

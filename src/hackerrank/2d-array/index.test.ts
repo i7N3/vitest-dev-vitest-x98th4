@@ -1,10 +1,10 @@
 import { describe, it, expect } from 'vitest';
-import { solution } from '.';
+import { twoDimArray } from '.';
 
 describe('2D Array - DS', () => {
-  it('Sample tests', () => {
+  it('should calculate the maximum hourglass sum in a basic 6x6 array', () => {
     expect(
-      solution([
+      twoDimArray([
         [1, 1, 1, 0, 0, 0],
         [0, 1, 0, 0, 0, 0],
         [1, 1, 1, 0, 0, 0],
@@ -13,8 +13,11 @@ describe('2D Array - DS', () => {
         [0, 0, 1, 2, 4, 0],
       ])
     ).toBe(19);
+  });
+
+  it('should handle negative and high positive values within the array', () => {
     expect(
-      solution([
+      twoDimArray([
         [1, 1, 1, 0, 0, 0],
         [0, 1, 0, 0, 0, 0],
         [1, 1, 1, 0, 0, 0],
@@ -23,8 +26,11 @@ describe('2D Array - DS', () => {
         [0, 0, -1, -2, -4, 0],
       ])
     ).toBe(13);
+  });
+
+  it('should work correctly with an array containing all negative values except the hourglass', () => {
     expect(
-      solution([
+      twoDimArray([
         [-9, -9, -9, 1, 1, 1],
         [0, -9, 0, 4, 3, 2],
         [-9, -9, -9, 1, 2, 3],

@@ -1,5 +1,8 @@
 // https://www.hackerrank.com/challenges/sherlock-and-anagrams/
-export const solution = (s: string): number => {
+
+// time: O(n^2 * m * log(m)), space: O(n^2 * m)
+// Where n is a length of s, and m is the maximum length of a substring
+export const sherlockAndAnagrams = (s: string): number => {
   let strs = [];
 
   for (let chunkSize = 1; chunkSize < s.length; chunkSize++) {

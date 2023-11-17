@@ -1,12 +1,21 @@
 import { describe, it, expect } from 'vitest';
-import { solution } from '.';
+import { stringsMakingAnagrams } from '.';
 
 describe('Strings: Making Anagrams', () => {
-  it('Sample tests', () => {
-    expect(solution('cde', 'abc')).toBe(4);
-    expect(solution('showman', 'woman')).toBe(2);
+  it('should return 4 for strings "cde" and "abc"', () => {
+    expect(stringsMakingAnagrams('cde', 'abc')).toBe(4);
+  });
+
+  it('should return 2 for strings "showman" and "woman"', () => {
+    expect(stringsMakingAnagrams('showman', 'woman')).toBe(2);
+  });
+
+  it('should return 30 for long strings', () => {
     expect(
-      solution('fcrxzwscanmligyxyvym', 'jxwtrhvujlmrpdoqbisbwhmgpmeoke')
+      stringsMakingAnagrams(
+        'fcrxzwscanmligyxyvym',
+        'jxwtrhvujlmrpdoqbisbwhmgpmeoke'
+      )
     ).toBe(30);
   });
 });

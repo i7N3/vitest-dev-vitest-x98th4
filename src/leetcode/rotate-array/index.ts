@@ -9,7 +9,7 @@ const reverse = (nums: number[], start: number, end: number) => {
 };
 
 // time: O(n), space: O(1)
-export const solution = (nums: number[], k: number) => {
+export const rotateArray = (nums: number[], k: number) => {
   const n = nums.length;
   // Ensure k is within the range [0, n-1]
   k = k % n;

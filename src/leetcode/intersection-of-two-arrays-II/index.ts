@@ -1,5 +1,8 @@
 // time: O(n + m), space: O(n)
-export const solution = (nums1: number[], nums2: number[]): number[] => {
+export const intersectionOfTwoArraysII = (
+  nums1: number[],
+  nums2: number[]
+): number[] => {
   const cache = new Map<number, number>();
   const isNums1GtNums2 = nums1.length > nums2.length;
 
@@ -29,7 +32,10 @@ export const solution = (nums1: number[], nums2: number[]): number[] => {
 };
 
 // What if the given array is already sorted? How would you optimize your algorithm?
-// export const solution = (nums1: number[], nums2: number[]): number[] => {
+// export const intersectionOfTwoArraysII = (
+//   nums1: number[],
+//   nums2: number[]
+// ): number[] => {
 //   let i = 0,
 //     j = 0;
 

@@ -3,7 +3,7 @@
 const MAX_EXPENDITURE_VALUE = 201; // 0 <= expenditure[i] <= 200
 
 // time: O(n), space: O(1)
-export const solution = (
+export const fraudulentActivityNotifications = (
   expenditure: number[],
   trailingDays: number
 ): number => {

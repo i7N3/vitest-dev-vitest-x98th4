@@ -1,10 +1,16 @@
 import { describe, it, expect } from 'vitest';
-import { solution } from '.';
+import { specialPalindromeAgain } from '.';
 
 describe('Special palindrome again', () => {
-  it('Sample tests', () => {
-    expect(solution('asasd')).toBe(7);
-    expect(solution('abcbaba')).toBe(10);
-    expect(solution('aaaa')).toBe(10);
+  it('should return 7 for string "asasd"', () => {
+    expect(specialPalindromeAgain('asasd')).toBe(7);
+  });
+
+  it('should return 10 for string "abcbaba"', () => {
+    expect(specialPalindromeAgain('abcbaba')).toBe(10);
+  });
+
+  it('should return 10 for string "aaaa"', () => {
+    expect(specialPalindromeAgain('aaaa')).toBe(10);
   });
 });

@@ -1,5 +1,7 @@
 // https://www.hackerrank.com/challenges/new-year-chaos/
-export const solution = (queue: number[]): number | null => {
+
+// time: O(n), space: O(1)
+export const newYearChaos = (queue: number[]): number | null => {
   let totalBribes = 0,
     expectedAtPosition1 = 1,
     expectedAtPosition2 = 2,

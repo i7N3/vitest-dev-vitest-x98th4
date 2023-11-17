@@ -1,9 +1,11 @@
 // https://www.hackerrank.com/challenges/crush
-export const solution = (n: number, queries: number[][]): number => {
+
+// time: O(m + n), space: O(n)
+export const arrayManipulation = (n: number, m: number[][]): number => {
   const arr = Array(n + 2).fill(0);
 
-  for (let i = 0; i < queries.length; i++) {
-    const [a, b, k] = queries[i];
+  for (let i = 0; i < m.length; i++) {
+    const [a, b, k] = m[i];
     arr[a] += k;
     arr[b + 1] -= k;
   }

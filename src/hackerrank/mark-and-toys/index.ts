@@ -1,6 +1,10 @@
 // https://www.hackerrank.com/challenges/mark-and-toys
+
 // time: O(n * log n) + O (n) loop, but dominated is sorting, space: O(1)
-export const solution = (source: number[], initialBudget: number): number => {
+export const markAndToys = (
+  source: number[],
+  initialBudget: number
+): number => {
   let maximumToys = 0,
     budget = initialBudget;
 
